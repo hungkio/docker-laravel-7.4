@@ -1,10 +1,9 @@
-FROM php:7.4-fpm
+FROM php:7.4-rc-apache-stretch
 
 ARG APP_NAME
 ENV APP_NAME=$APP_NAME
 
 RUN apt-get update && apt-get install -y \
-    apt-utils \
     git \
     curl \
     nano \
